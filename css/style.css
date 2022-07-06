@@ -99,6 +99,16 @@ body {
 }
 
 .logoBlock:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
   width: 120px;
   top: 1%;
   right: 1%;
@@ -116,6 +126,16 @@ body {
 }
 
 .tour:hover ~ .logoBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
   width: 120px;
   top: 1%;
   right: 1%;
@@ -174,6 +194,7 @@ body {
 
 @media screen and (max-width: 1280px) {
   .tour {
+    opacity: 1;
     height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -193,11 +214,34 @@ body {
   .title__item-year {
     right: 0;
   }
-}
-.logo {
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
+
+  .logoBlock {
+    padding-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 25%;
+    right: 0;
+    top: 0;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .logoBlock__top {
+    display: none;
+  }
+  .logoBlock__bottom {
+    display: none;
+  }
+
+  .logo {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+  }
+
+  .contacts {
+    grid-row: 1;
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style.css.map */
