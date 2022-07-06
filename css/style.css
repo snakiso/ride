@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+}
+
+.main {
+  background-color: #000;
+  height: 100vh;
+  width: 100vw;
+}
+
+.tour {
+  opacity: 0.3;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.tour__item {
+  height: 100vh;
+  position: relative;
+  width: 25%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.tour__item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.tour__item:hover {
+  width: 40%;
+}
+.tour__item:hover .title {
+  padding: 20px 110px;
+}
+
+.title {
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: absolute;
+  bottom: 40px;
+  color: #FFFFFF;
+  padding: 20px 40px;
+}
+.title__item {
+  position: relative;
+}
+.title__item-name {
+  font-size: 3vw;
+}
+.title__item-date {
+  font-size: 26px;
+}
+.title__item-year {
+  position: absolute;
+  top: 0;
+  right: -40px;
+  font-size: 2.5vw;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.title::before {
+  content: "";
+  background: #444d6a;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  left: 0;
+  top: 0;
+}
+
+.logoBlock {
+  font-size: 20px;
+  color: #FFFFFF;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+.logoBlock__bottom {
+  text-align: right;
+}
+.logoBlock img {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.logoBlock:hover {
+  width: 120px;
+  top: 1%;
+  right: 1%;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+.logoBlock:hover img {
+  width: 100%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.logoBlock:hover ~ .contacts {
+  opacity: 1;
+}
+
+.tour:hover ~ .logoBlock {
+  width: 120px;
+  top: 1%;
+  right: 1%;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+.tour:hover ~ .logoBlock img {
+  width: 100%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contacts {
+  margin: auto;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  width: 80px;
+}
+.contacts a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 20px;
+}
+.contacts a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.contacts a:hover::after {
+  width: 80px;
+}
+
+.tour:hover ~ .contacts {
+  opacity: 1;
+}
+
+.contacts:hover {
+  opacity: 1;
+}
+
+.contacts:hover ~ .logoBlock {
+  width: 120px;
+  top: 1%;
+  right: 1%;
+  -webkit-transform: translate(0%, 0%);
+          transform: translate(0%, 0%);
+}
+
+@media screen and (max-width: 1280px) {
+  .tour {
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tour__item {
+    width: 100vw;
+  }
+
+  .title__item-name {
+    margin: 0;
+  }
+  .title__item-date {
+    font-size: 20px;
+  }
+  .title__item-year {
+    right: 0;
+  }
+}
+.logo {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}/*# sourceMappingURL=style.css.map */
