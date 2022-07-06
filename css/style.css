@@ -80,6 +80,9 @@ body {
 }
 
 .logoBlock {
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
   font-size: 20px;
   color: #FFFFFF;
   position: absolute;
@@ -97,53 +100,7 @@ body {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-
-.logoBlock:hover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
-  width: 120px;
-  top: 1%;
-  right: 1%;
-  -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
-}
-.logoBlock:hover img {
-  width: 100%;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.logoBlock:hover ~ .contacts {
-  opacity: 1;
-}
-
-.tour:hover ~ .logoBlock {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
-  width: 120px;
-  top: 1%;
-  right: 1%;
-  -webkit-transform: translate(0%, 0%);
-          transform: translate(0%, 0%);
-}
-
-.tour:hover ~ .logoBlock img {
+.logoBlock img {
   width: 100%;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -203,6 +160,12 @@ body {
   }
   .tour__item {
     width: 100vw;
+  }
+  .tour__item:hover {
+    width: 100vw;
+  }
+  .tour__item:hover .title {
+    padding: 20px 40px;
   }
 
   .title__item-name {

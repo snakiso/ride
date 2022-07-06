@@ -55,6 +55,7 @@ body
   left: 0
   top: 0 
 .logoBlock
+ column-gap: 10px 
  font-size: 20px
  color: #FFFFFF
  position: absolute
@@ -66,31 +67,9 @@ body
   text-align: right
  img 
   transition: all 0.4s
-.logoBlock:hover
- display: flex
- flex-direction: row-reverse
- column-gap: 10px 
- width: 120px
- top:1%
- right: 1%
- transform: translate(0%,0%)
  img
   width: 100%
-  transition: all 0.4s
-.logoBlock:hover ~.contacts
- opacity: 1   
-.tour:hover ~ .logoBlock
- display: flex
- flex-direction: row-reverse
- column-gap: 10px
- width: 120px
- top: 1%
- right: 1%
- transform: translate(0%,0%)
- 
-.tour:hover ~ .logoBlock img
- width: 100%
- transition: all 0.4s
+  transition: all 0.4s 
 .contacts
  margin: auto
  opacity: 0
@@ -129,6 +108,10 @@ body
   flex-direction: column
   &__item
    width: 100vw
+  &__item:hover
+   width: 100vw
+   .title
+    padding: 20px 40px  
  .title
   &__item
    &-name
